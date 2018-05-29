@@ -1,0 +1,251 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<ui version="4.0">
+ <class>MainWindow</class>
+ <widget class="QMainWindow" name="MainWindow">
+  <property name="geometry">
+   <rect>
+    <x>0</x>
+    <y>0</y>
+    <width>881</width>
+    <height>590</height>
+   </rect>
+  </property>
+  <property name="font">
+   <font>
+    <family>Calibri</family>
+   </font>
+  </property>
+  <property name="contextMenuPolicy">
+   <enum>Qt::DefaultContextMenu</enum>
+  </property>
+  <property name="windowTitle">
+   <string>Калькулятор векторов</string>
+  </property>
+  <property name="autoFillBackground">
+   <bool>false</bool>
+  </property>
+  <widget class="QWidget" name="centralWidget">
+   <widget class="QLabel" name="label">
+    <property name="geometry">
+     <rect>
+      <x>310</x>
+      <y>30</y>
+      <width>291</width>
+      <height>51</height>
+     </rect>
+    </property>
+    <property name="sizePolicy">
+     <sizepolicy hsizetype="Preferred" vsizetype="Preferred">
+      <horstretch>0</horstretch>
+      <verstretch>0</verstretch>
+     </sizepolicy>
+    </property>
+    <property name="font">
+     <font>
+      <family>Yu Gothic UI Semilight</family>
+      <pointsize>20</pointsize>
+     </font>
+    </property>
+    <property name="text">
+     <string>Выберите действие:</string>
+    </property>
+   </widget>
+   <widget class="QGroupBox" name="grBoxMain">
+    <property name="geometry">
+     <rect>
+      <x>100</x>
+      <y>80</y>
+      <width>711</width>
+      <height>371</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Century Gothic</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="title">
+     <string/>
+    </property>
+    <widget class="QPushButton" name="btnPlus">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>20</y>
+       <width>161</width>
+       <height>161</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Yu Gothic UI Semilight</family>
+      </font>
+     </property>
+     <property name="text">
+      <string>сложение</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnMinus">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>20</y>
+       <width>161</width>
+       <height>161</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Yu Gothic UI Semilight</family>
+      </font>
+     </property>
+     <property name="text">
+      <string>вычитание</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnUmnozh">
+     <property name="geometry">
+      <rect>
+       <x>360</x>
+       <y>20</y>
+       <width>161</width>
+       <height>161</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Yu Gothic UI Semilight</family>
+      </font>
+     </property>
+     <property name="text">
+      <string>умножение
+на число</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnVecProizved">
+     <property name="geometry">
+      <rect>
+       <x>20</x>
+       <y>190</y>
+       <width>161</width>
+       <height>161</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Yu Gothic UI Semilight</family>
+      </font>
+     </property>
+     <property name="text">
+      <string>векторное 
+произведение</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnModul">
+     <property name="geometry">
+      <rect>
+       <x>190</x>
+       <y>190</y>
+       <width>161</width>
+       <height>161</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Yu Gothic UI Semilight</family>
+      </font>
+     </property>
+     <property name="text">
+      <string>модуль вектора</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnUgol">
+     <property name="geometry">
+      <rect>
+       <x>360</x>
+       <y>190</y>
+       <width>161</width>
+       <height>161</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Yu Gothic UI Semilight</family>
+      </font>
+     </property>
+     <property name="text">
+      <string>угол между 
+векторами</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnSkalyar">
+     <property name="geometry">
+      <rect>
+       <x>530</x>
+       <y>20</y>
+       <width>161</width>
+       <height>161</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Yu Gothic UI Semilight</family>
+      </font>
+     </property>
+     <property name="text">
+      <string>скалярное
+ произведение</string>
+     </property>
+    </widget>
+    <widget class="QPushButton" name="btnSmesh">
+     <property name="geometry">
+      <rect>
+       <x>530</x>
+       <y>190</y>
+       <width>161</width>
+       <height>161</height>
+      </rect>
+     </property>
+     <property name="font">
+      <font>
+       <family>Yu Gothic UI Semilight</family>
+      </font>
+     </property>
+     <property name="text">
+      <string>смешанное 
+произведение</string>
+     </property>
+    </widget>
+   </widget>
+   <widget class="QLabel" name="label_2">
+    <property name="geometry">
+     <rect>
+      <x>110</x>
+      <y>460</y>
+      <width>721</width>
+      <height>101</height>
+     </rect>
+    </property>
+    <property name="font">
+     <font>
+      <family>Calibri Light</family>
+      <pointsize>10</pointsize>
+     </font>
+    </property>
+    <property name="frameShape">
+     <enum>QFrame::NoFrame</enum>
+    </property>
+    <property name="text">
+     <string>Примечание: в программе можно перетаскивать полученные значения векторов в любые ячейки, 
+чтобы выполнять над ними (векторами) любые мат. операции.
+
+История всех результатов автоматически сохраняется в файл &quot;Result.txt&quot; в режиме дозаписи.</string>
+    </property>
+   </widget>
+  </widget>
+ </widget>
+ <layoutdefault spacing="6" margin="11"/>
+ <resources/>
+ <connections/>
+</ui>
