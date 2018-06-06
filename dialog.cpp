@@ -110,10 +110,11 @@ Dialog::~Dialog()
     delete ui;
 }
 
-void Dialog::add_to_history(const QString &str, QFile &file)
+void Dialog::add_to_history(const QString &name, const QString &str, QFile &file)
 {
+
     ui->listWidget->addItem(str);
-    file.write(str.toLatin1() + "\r\n");
+    file.write(QString("%1: %2 \r\n").arg(name.leftJustified(10)).arg(str).toUtf8());
 }
 
 
@@ -127,13 +128,13 @@ void Dialog::solver_func()
     double A[3], B[3], D[3];
 
     QFile file("Result.txt");
-    file.open(QIODevice::Append);
-
+    file.open(QIODevice::Append | QFile::Text);
+    file.write(windowTitle().toUtf8() + "\r\n");
     //передача значений вектора А покоординатно в строку
     for (int i = 0; i < row1->vec.count(); i++)
         A[i] = row1->vec[i]->value();
     //сохраняем вектор в листе истории
-    add_to_history(row1->as_string(), file);
+    add_to_history("A",row1->as_string(), file);
 
 
     if (row2) {
@@ -141,14 +142,14 @@ void Dialog::solver_func()
         for (int i = 0; i < row2->vec.count(); i++)
             B[i] = row2->vec[i]->value();
         //сохраняем вектор в листе истории
-        add_to_history(row2->as_string(), file);
+        add_to_history("B",row2->as_string(), file);
     }
 
     //передача значений вектора D покоординатно в строку ( в смешанном произведении )
     if (row3) {
         for (int i = 0; i < row3->vec.count(); i++)
             D[i] = row3->vec[i]->value();
-        add_to_history(row3->as_string(), file);
+        add_to_history("D",row3->as_string(), file);
     }
 
     QString result;
@@ -233,6 +234,7 @@ void Dialog::solver_func()
     }
     }
     textEdit->setText(result + razmernost);
-    add_to_history(result.replace("(", "").replace(")", ""), file);
+    add_to_history("Результат",result.replace("(", "").replace(")", ""), file);
+    file.write("\r\n");
     file.close();
 }

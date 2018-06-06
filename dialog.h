@@ -49,7 +49,7 @@ private:
     QTextEdit *textEdit;                    // область с выводом ответа
     MathOperations currentOp;               // мат.операции
 
-    void add_to_history(const QString &str, QFile &file);
+    void add_to_history(const QString &name, const QString &str, QFile &file);
 };
 
 #endif // DIALOG_H

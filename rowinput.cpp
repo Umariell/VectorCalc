@@ -25,7 +25,7 @@ QString RowInput::as_string()
     QStringList list;
 
     for (int i = 0; i < vec.length(); i++)
-        list.append(QString::number(vec[i]->value()));
+        list.append(QString::number(vec[i]->value()));//помещаем всё в список и джойним его с табом
 
     return list.join("\t");
 }
@@ -49,8 +49,8 @@ void RowInput::dropEvent(QDropEvent *event)
 void RowInput::dragEnterEvent(QDragEnterEvent *event)
 {
     if (event->mimeData()->hasFormat("application/x-qabstractitemmodeldatalist")) {
-        event->acceptProposedAction();
+        event->acceptProposedAction();//"+"
     } else {
-        event->ignore();
+        event->ignore(); //"-"
     }
 }
